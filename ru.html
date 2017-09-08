@@ -1,10 +1,9 @@
 <!DOCTYPE HTML>
 
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Friends Watcher · Addon for World of Warcraft</title>
-		<!-- <title>Смотрящий · Расширение для World of Warcraft</title> -->
+		<title>Смотрящий · Расширение для World of Warcraft</title>
 		<meta name="description" content="Loriini is a front-end localization tool, build with pure JavaScript, that make it easy to localize simple web pages on any language">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style type="text/css">
@@ -264,13 +263,13 @@
 				footer aside {
 					display: none;
 				}
-				main {
-					min-height: 50em;
-				}
 				article {
 					max-width: 36em;
 					margin: 0 auto;
 					/*margin: 0 auto;*/
+				}
+				main {
+					min-height: 50em;
 				}
 				article figure {
 					display: block;
@@ -410,8 +409,8 @@
 			<h1>
 				Friends Watcher
 				<small>
-					World of Warcraft AddOn
-					<span> by <a href="#" class="external">Nikita S. Doroshenko</a></span>
+					Расширение для World of Warcraft
+					<span> от <a href="#" class="external">Никиты С. Дорошенко</a></span>
 				</small>
 			</h1>
 			<ul>
@@ -419,7 +418,7 @@
 					<a href="#" class="disabled">Deutsch</a>
 				</li>
 				<li>
-					<a href="index.html" class="active" id="index">English</a>
+					<a href="index.html" id="index">English</a>
 				</li>
 				<li>
 					<a href="#" class="disabled">Español</a>
@@ -434,7 +433,7 @@
 					<a href="#" class="disabled">Português</a>
 				</li>
 				<li>
-					<a href="ru.html">Русский</a>
+					<a href="ru.html" class="active">Русский</a>
 				</li>
 			</ul>
 		</header>
@@ -442,20 +441,20 @@
 			<article>
 				<figure id="figure">
 					<img id="source" src="assets/frame/base.jpg" alt="">
-					<img id="local" src="assets/frame/locale/en.png" alt="">
+					<img id="local" src="assets/frame/locale/ru.png" alt="">
 				</figure>
-				<h2>Watch for your friend's activity</h2>
-				<p>Imagine that you have friends who enjoy playing on different realms and for both  factions (for the Horde and for the Alliance), and maybe even their characters got same names. How you'll track them and easily understand when special character is online on your server and for your faction?</p>
-				<p>This simple open source addon will let you to select witch friends you want to track and it will always show current friend's factions in Friends List window.<!-- and how. --> After selecting some of your friends, as soon as your riends will login to another character, this addon will inform you, for witch character your friend is currently playing, on what realm and for what faction:</p>
-				<p id="message" style="color:#9cf">[Chuck Norris] (<span style="color:#fc6">Ubermegakiller</span>-Stormrage) has entered game world for the Alliance.</p>
-				<p>You can find this addon on <a href="#" class="external">curse.com</a> website, or download it directly from here and manually install it, by placing AddOn folder in to your World of Warcraft's Interface directory.</p>
-				<button class="special">Download</button><button class="external">Source on GitHub</button>
+				<h2>Следи за активностями друзей</h2>
+				<p>У тебя есть друзья по BattleTag'у? Может быть, они играют и за Орду, и за Альянс. А может - даже и в разных мирах... И при этом у них одинаковые имена персонажей. И как тут отследить, в какой игровой мир зашёл твой друг и за какую расу он играет?</p>
+				<p>Это простейшее расширение с открытым исходным кодом позволит тебе выбрать определённых друзей, статус которых ты хотел бы отслеживать. Кроме того, оно добавляет в окно "Списка друзей" информацию о фракциях всех твои друзей. После того, как ты выберешь, за какими друзьями хечешь следить, при каждом их входе или смене персонажа ты увидешь, на каком сервере играет твой друг, а также его имя и фракцию.</p>
+				<p style="color:#9cf">[Чак Норрис] (<span style="color:#fc6">Убермегакиллер</span>-ШтормовойГнев) защёл в игровой мир за Альянс.</p>
+				<p>Это расширение доступно на сайте curse.com, либо ты можешь скачать его напрямую из исходников и установить вручную, поместив загруженную дирректорию AddOn в корневой каталог вашей игры, в дирректорию Interface.</p>
+				<a href="https://github.com/World-of-Warcraft-Advanced-Interface/Friends-Watcher/blob/master/Source.lua"><button class="special">Загрузить</button><button class="external">исходный код</button></a>
 			</article>
 		</main>
 		<footer>
-			<p>Free & Open Source (<abbr title="The MIT License is a permissive free software license originating at the Massachusetts Institute of Technology">MIT</abbr>)<br>All trademarks referenced herein are the properties of their respective owners</p>
+			<p>Свободный и открытый исходный код (<abbr title="Лицензия открытого программного обеспечения, разработанная Массачусетским технологическим институтом">МТИ</abbr>)<br>Все торговые марки, упомянутые здесь, являются собственностью их соответствующих правообладателей</p>
 			<aside>
-				<p>Project by <a href="#">Nikita S. Doroshenko</a></p>
+				<p>Проект <a href="#">Никиты С. Дорошенко</a></p>
 			</aside>
 		</footer>
 		<script>
