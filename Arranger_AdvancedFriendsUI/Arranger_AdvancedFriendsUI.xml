@@ -1,0 +1,16 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+	
+	<Script file="Arranger_AdvancedFriendsUI.lua"/>
+	<Frame>
+		<Scripts>
+			<OnLoad>
+				self:RegisterEvent("PLAYER_ENTERING_WORLD")
+			</OnLoad>
+			<OnEvent>
+				self:UnregisterEvent("PLAYER_ENTERING_WORLD")
+				InitializeAdvancedInterface()
+			</OnEvent>
+		</Scripts>
+	</Frame>
+</Ui>
