@@ -4,405 +4,35 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Friends Watcher · Addon for World of Warcraft</title>
-		<meta name="description" content="">
+		<meta name="description" content="Simple open source addon will let you to select witch friends you want to track and it will always show current friend's factions in Friends List window">
+		<!-- This simple page was made by Nikita S. Doroshenko, design of this page is takeing from official World of Warcraft website -->
+		<!-- With ♥ to
+		.////////////... ..////....////. .///////////  ////////////. ../.    ./////////..   .////.....    
+		 ../////////////.  .///.   .//.  .////..   ./. ///....////.  ////.    ..//../////.  .//////////.  
+		  ./////.  .////.  .///.   .//.   ./..     ./. //.   .///.. ./////   ..///. ..////. .///////////. 
+		  ./////.  .////.  .////.  .//.   ./.    .///..//   .///.. .//////.  /////.   .///. .////////////.
+		  ./////.  .////.  .///.   .//.   ./.    //// ...  .////. .////////. .////.   .///. .///.  ./////.
+		  ./////..////.    ////.   .//.        ..///.      .///.  .////////.  ////.   ////. .///.    .///.
+		  .//////////.     .///.   .//.       .////.      .////. .////./////. ////.  .//..  .///.     ////
+		  .////////////    .///.   .//.      ./////       .////. .///. ..///. .///////..    .///.     ////
+		  ./////../////.   .////.  .//.     ..///..      .///// .////    ////. /////////.   .////    .///.
+		  ./////.  .////   .////.  .//      /////        /////. .///.    .///. .///../////  .////.  .////.
+		  ./////   .////   .////.  .//.   .////..       .////.  .///.    .///. .///  .////.  ////.  .///. 
+		  ./////   ./////  .////.  .//.   .////        ./////   ///////...///. .///  .////.  .///.  .///  
+		  .////.   ./////  /////.  .//    ////.      . ./////   ////..///////. .///.  /////. .///.  .//.  
+		  .////.   .///// ./////.  .//.  .///.     .//. ////. ./////.  ..////. .///.  .////.  .//.  .///  
+		  .////.    ////. ./////.  .//.  ..//   ..///.  .///..///....   .////. .///.   ////.  .//.  ////  
+		  .////.   .////. ..////   .//    //..../////.  ./// ... ....  ./////. .///.   .////. .//. .///.  
+		  .////.   .////.  ////.  .////...///////////.  .//  ...////. ./////. .////.   .////. .//..////.  
+		  .////.  .////.  .////. ........    .. ....   .//...////////  .////  /////.   /////.  //./////.  
+		  .////...////.   .////...........////.////.. .//////////////   .//.  ..////  ./////. .////////   
+		  //////////..    ./////////////////////////. .......  ......   .//      ./.  ...///  .///////.   
+		..////./...     .///..                ../////.                    /.       ..     ... ........    
+		
+		                        E   N   T   E   R   T   A   I   N   M   E   N   T                         
+		-->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<style type="text/css">
-			:root {
-				font-size: 1em;
-				line-height: 1.62;
-			}
-			html {
-				font-family: 'Open Sans', sans-serif;
-				color: #222;
-			}
-			body {
-				position: relative;
-				margin: 0;
-				cursor: default;
-				color: rgb(234, 222, 194);
-				background: rgb(22, 14, 8);
-				text-shadow: 0 0 .1em rgba(12, 0, 0, .8);
-			}
-			body * {
-				box-sizing: border-box;
-			}
-			acronym,
-			abbr {
-				transition: .12s;
-				text-decoration: none;
-				border-bottom: 1px dotted rgb(248, 184, 2);
-			}
-			acronym:hover,
-			abbr:hover {
-				border-color: rgb(248, 202, 0);
-			}
-			body {
-				text-align: center;
-			}
-			header,
-			main,
-			footer {
-				padding: 2.48em 1.12em;
-			}
-			header {
-				padding-top: 2.86em;
-				padding-bottom: 3.24em;
-				background-repeat:no-repeat;
-				background-size:cover;
-				background-position:center;
-			}
-			header p {
-				font-size: 1.12em;
-				margin: 0 auto 4em;
-			}
-			header span {
-				display: none;
-			}
-			main {
-				position: relative;
-				background: rgb(32, 20, 12);
-				border-top: 1px solid rgb(86, 68, 60);
-				border-bottom: 1px solid rgb(86, 68, 60);
-			}
-			article {
-				position: relative;
-			}
-			article p {
-				position: relative;
-				margin: 0 auto;
-				text-align: justify;
-				padding-bottom: 1em;
-			}
-			figure {
-				display: none;
-				padding: 0;
-				margin:0;
-			}
-			footer {
-				position: relative;
-				font-size: .86em;
-				text-transform: uppercase;
-				opacity: .32;
-			}
-			h1,
-			h2 {
-				font-family: 'Semplicita Pro', 'Ubuntu', sans-serif;
-				font-weight: 700;
-				position: relative;
-				margin: 0 0 .68em;
-				color: rgb(248, 246, 244);
-			}
-			h1 {
-				font-size: 2.12em;
-				text-shadow: 0 0 .24em rgba(0, 0, 0, .8);
-			}
-			h2 {
-				font-size: 1.38em;
-				text-shadow: 0 0 .32em rgba(0, 0, 0, .8);
-			}
-			h1 small{
-				font-size: 1.16rem;
-				line-height: 2.4em;
-				font-weight: 500;
-				display: block;
-				color: rgb(180, 148, 122);
-				text-shadow: 0 0 .48em rgba(0, 0, 0, .8);
-			}
-			ul {
-				padding: 0;
-			}
-			li {
-				display: inline-block;
-				padding: 0 .48em;
-				list-style: none;
-				font-size: .86em;
-			}
-			li a.disabled {
-				opacity: 0.38;
-				cursor: default;
-				border: none;
-			}
-			a {
-				text-decoration: none;
-				color: rgb(248, 184, 2);
-				border-bottom: 1px solid transparent;
-				outline: none;
-			}
-			a:hover, a:focus {
-				transition: .12s;
-				color: rgb(248, 202, 0);
-				border-color: rgb(248, 202, 0);
-			}
-			a.active {
-				cursor: default;
-				color: #fff;
-				border: none;
-			}
-			a.external {
-				position: relative;
-			}
-			a.external::before {
-				position: absolute;
-				top: .22em;
-				right: -.18em;
-				width: 4px;
-				height: 4px;
-				content: '';
-				transition: .12s;
-				border-width: 2px;
-				border-style: solid;
-				border-color: rgb(248, 184, 2) rgb(248, 184, 2) transparent transparent;
-			}
-			a.external:hover::before {
-				top: .20em;
-				right: -.20em;
-				width: 2px;
-				height: 2px;
-				border-color: rgb(248, 202, 0) rgb(248, 202, 0) transparent transparent;
-			}
-			button {
-				font-family: 'Open Sans', sans-serif;
-				font-size: 1.04em;
-				font-weight: 400;
-				position: relative;
-				margin-top: 1.64em;
-				padding: .62em 0;
-				cursor: pointer;
-				transition: .22s;
-				text-transform: uppercase;
-				color: rgb(248, 184, 2);
-				border: .08em solid rgb(202, 134, 26);
-				background-color: rgba(0, 0, 0, .4);
-				box-shadow: 0 0 0 .12em rgba(0, 0, 0, .8);
-				width: 100%;
-			}
-			button.special {
-				border-color: rgb(234, 48, 18);
-				background-color: rgba(160, 22, 0, .6);
-			}
-			button.external::before {
-				position: absolute;
-				top: .12em;
-				right: .12em;
-				content: '';
-				transition: .22s;
-				border-width: 0 1em 1em 0;
-				border-style: solid;
-				border-color: transparent rgb(202, 134, 26) transparent transparent;
-			}
-			button:hover {
-				color: rgb(248, 212, 114);
-				background-color: rgba(164, 102, 2, 1);
-			}
-			button.special:hover {
-				background-color: rgba(160, 22, 0, 1);
-			}
-			button.external:hover::before {
-				top: 0;
-				right: 0;
-				border-width: 0 .48em .48em 0;
-			}
-			::selection {
-				color: rgba(234, 222, 194, .48);
-				background: none;
-			}
-			a::selection {
-				color: rgba(248, 184, 2, .48);
-			}
-			::-webkit-scrollbar { 
-				display: none; 
-			}
-			@media (min-width: 20em) and (max-width: 48em) { /* 320-768 */
-				header {
-					background-image: url('assets/background/small.jpg');
-				}
-			}
-			@media (min-width: 48em) and (max-width: 64em) { /* 768-1024 */
-				header {
-					background-image: url('assets/background/medium.jpg');
-				}
-			}
-			@media (min-width: 64em) and (max-width: 90em) { /* 1024-1440 */
-				header {
-					background-image: url('assets/background/large.jpg');
-				}
-			}
-			@media (min-width: 32em) { /* 768+ */
-				h1 {
-					font-size: 2.64em;
-				}
-				h2 {
-					font-size: 1.64em;
-				}
-				h1 small{
-					font-size: 1.24rem;
-					line-height: 2.4em;
-				}
-			}
-			@media (min-width: 48em) { /* 768+ */
-				:root {
-					line-height: 1.68;
-				}
-				h1 {
-					font-size: 2.86em;
-				}
-				h2 {
-					font-size: 1.84em;
-				}
-				h1 small{
-					font-size: 1.24rem;
-					line-height: 2.42em;
-				}
-				header {
-					padding-top: 3.64em;
-					padding-bottom: 4.16em;
-				}
-				header span {
-					display: inline;
-				}
-				footer aside {
-					display: none;
-				}
-				main {
-					min-height: 50em;
-				}
-				article {
-					max-width: 36em;
-					margin: 0 auto;
-					/*margin: 0 auto;*/
-				}
-				article figure {
-					display: block;
-				}
-				figure img {
-					position: absolute;
-					z-index: 0;
-					/*top:0em;*/
-					/*right: 28em;*/
-					left: -32em;
-					max-width: 38em;
-					/*max-height: 40em;*/
-				}
-				/*main {*/
-					/*display: -webkit-flex;*/
-					/*display: flex;*/
-					/*justify-content: space-between;*/
-				/*}*/
-				/*figure {*/
-					/*-webkit-flex: 4;*/
-/*					flex: 1;
-					max-width: 40%;
-					display: block;
-				}*/
-				/*figure img {*/
-					/*position: absolute;*/
-					/*z-index: 0;*/
-					/*top:0em;*/
-					/*right: 28em;*/
-					/*left:-10%;*/
-					/*max-width: 40em;*/
-					/*max-height: 40em;*/
-				/*}*/
-				/*article {*/
-					/*-webkit-flex: 2;*/
-					/*flex: 1;*/
-					/*text-align: left;*/
-					/*width: 60%;*/
-					/*max-width: 560px;*/
-				/*}*/
-				article {
-					/*text-align: left;*/
-				}
-				article p {
-					/*text-align: left;*/
-				}
-				button {
-					font-size: 1.14em;
-					margin-top: 2.24em;
-					padding: .68em 0;
-				}
-				figure img {
-					opacity: 0;
-					left: -38em;
-					max-width: 42em;
-				}
-				.slide img {
-					-webkit-animation: slide 1s forwards;
-					-webkit-animation-delay: 0.32s;
-					animation: slide 1s forwards;
-					animation-delay: .32s;
-				}
-				@-webkit-keyframes slide {
-					100% { left: -34em; opacity: 1 }
-				}
-
-				@keyframes slide {
-					100% { left: -34em; opacity: 1 }
-				}
-			}
-			@media (min-width: 90em) { /* 1440+ */
-				header {
-					background-image: url('assets/background/extended.jpg');
-					padding-top: 18vh;
-					padding-bottom: 16vh;
-				}
-				button {
-					width: 46%;
-					float: left;
-				}
-				button:last-child {
-					float: right;
-				}
-				article:after {
-					content: "";
-					display: table;
-					clear: both;
-				}
-			}
-			@media (min-width: 120em) { /* 1920+ */
-				header {
-					background-image: url('assets/background/extended.jpg');
-					padding-top: 22vh;
-					padding-bottom: 18vh;
-				}
-				h1 {
-					font-size: 3.32em;
-				}
-				h2 {
-					font-size: 1.84em;
-				}
-				h1 small{
-					font-size: 1.48rem;
-					line-height: 2.42em;
-				}
-			}
-			@media (min-width: 160em) { /* 2560+ */
-				header,
-				main,
-				footer {
-					/*padding-left: 48em;*/
-					/*padding-right: 48em;*/
-				}
-				header {
-					padding-top: 40vh;
-					height: 100vh;
-				}
-				main {
-					padding-top: 4.64em;
-					padding-bottom: 4.48em;
-				}
-				h1 {
-					font-size: 3.86em;
-				}
-				h2 {
-					font-size: 2.12em;
-				}
-				h1 small{
-					font-size: 1.64rem;
-					line-height: 2.42em;
-				}
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
 	<body>
 		<header>
@@ -410,27 +40,27 @@
 				Friends Watcher
 				<small>
 					World of Warcraft AddOn
-					<span> by <a href="#" class="external">Nikita S. Doroshenko</a></span>
+					<span> by Nikita S. Doroshenko</span>
 				</small>
 			</h1>
 			<ul>
 				<li>
-					<a href="#" class="disabled">Deutsch</a>
+					<a href="de.html">Deutsch</a>
 				</li>
 				<li>
 					<a href="index.html" class="active" id="index">English</a>
 				</li>
 				<li>
-					<a href="#" class="disabled">Español</a>
+					<a href="es.html">Español</a>
 				</li>
 				<li>
-					<a href="#" class="disabled">Français</a>
+					<a href="fr.html">Français</a>
 				</li>
 				<li>
-					<a href="#" class="disabled">Italiano</a>
+					<a href="it.html">Italiano</a>
 				</li>
 				<li>
-					<a href="#" class="disabled">Português</a>
+					<a href="pt.html">Português</a>
 				</li>
 				<li>
 					<a href="ru.html">Русский</a>
@@ -440,15 +70,15 @@
 		<main>
 			<article>
 				<figure id="figure">
-					<img id="source" src="assets/frame/base.jpg" alt="">
-					<img id="local" src="assets/frame/locale/en.png" alt="">
+					<img id="source" src="assets/frame/base.jpg" alt="Friends Frame">
+					<img id="local" src="assets/frame/locale/en.png" alt="Frame locale">
 				</figure>
 				<h2>Watch for your friend's activity</h2>
 				<p>Imagine that you have friends who enjoy playing on different realms and for both  factions (for the Horde and for the Alliance), and maybe even their characters got same names. How you'll track them and easily understand when special character is online on your server and for your faction?</p>
-				<p>This simple open source addon will let you to select witch friends you want to track and it will always show current friend's factions in Friends List window.<!-- and how. --> After selecting some of your friends, as soon as your riends will login to another character, this addon will inform you, for witch character your friend is currently playing, on what realm and for what faction:</p>
-				<p id="message" style="color:#9cf">[Chuck Norris] (<span style="color:#fc6">Ubermegakiller</span>-Stormrage) has entered game world for the Alliance.</p>
-				<p>You can find this addon on <a href="#" class="external">curse.com</a> website, or download it directly from here and manually install it, by placing AddOn folder in to your World of Warcraft's Interface directory.</p>
-				<a href="https://github.com/World-of-Warcraft-Advanced-Interface/Friends-Watcher/blob/master/Source.lua"><button class="special">Download</button><button class="external">Source on GitHub</button></a>
+				<p>This simple open source addon will let you to select witch friends you want to track and it will always show current friend's factions in Friends List window. After selecting some of your friends, as soon as your riends will login to another character, this addon will inform you, for witch character your friend is currently playing, on what realm and for what faction:</p>
+				<p class="message"><img src="assets/icons/status.png" alt="Status Icon"> [Chuck Norris] (<span><img src="assets/icons/client.png" alt="Client Icon">Ubermegakiller</span>-Stormrage) has entered game world for the Alliance.</p>
+				<p>You can find this addon on <a href="https://mods.curse.com/addons/wow/advanced-friends-interface" class="external">curse.com</a> website, or download it directly from here and manually install it, by placing AddOn folder in to your World of Warcraft's/Interface/AddOns directory.</p>
+				<a class="button special" href="https://github.com/World-of-Warcraft-Advanced-Interface/Friends-Watcher/archive/master.zip">Download</a><a class="button external" href="https://github.com/World-of-Warcraft-Advanced-Interface/Friends-Watcher/blob/master/Arranger_AdvancedFriendsUI/Arranger_AdvancedFriendsUI.lua">Source on GitHub</a>
 			</article>
 		</main>
 		<footer>
@@ -458,23 +88,7 @@
 			</aside>
 		</footer>
 		<script>
-			WebFontConfig = {
-				google: {
-					families: ['Ubuntu:500,700:cyrillic','Open Sans:400:cyrillic']
-				}
-			};
-			(function(d) {
-				var wf = d.createElement('script'), s = d.scripts[0];
-				wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-				wf.async = true;
-				s.parentNode.insertBefore(wf, s);
-			})(document);
-			window.onscroll = function slide(){
-					var img = document.getElementById("figure");
-						if(img.className != "slide") {
-							img.className += "slide";
-						}
-			}
+			WebFontConfig={google:{families:["Ubuntu:500,700:cyrillic","Open Sans:400:cyrillic"]}},function(e){var n=e.createElement("script"),s=e.scripts[0];n.src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js",n.async=!0,s.parentNode.insertBefore(n,s)}(document),window.onscroll=function(){var e=document.getElementById("figure");"slide"!=e.className&&(e.className+="slide")};
 		</script>
 	</body>
 </html>
