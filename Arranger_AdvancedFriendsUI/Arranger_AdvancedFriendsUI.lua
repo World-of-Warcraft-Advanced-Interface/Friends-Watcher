@@ -273,11 +273,8 @@ local function InitializeAdvancedInterfaceFriendsStatus()
 								print( BATTLENET_FONT_COLOR_CODE .. icons.BN .. string.format( L[ADVANCED_INTERFACE_FRIEND_TRACKING_ONLINE], globalName, icons[client], toonName, realmName) .. FONT_COLOR_CODE_CLOSE );
 								PlaySound(SOUNDKIT.UI_BNET_TOAST);
 							end
-							-- print(UnitFactionGroup(toonName.."-"..realmName))
 							status.battleTag["client"] = client
 							status.battleTag["isOnline"] = isOnline
-							-- print(status.battleTag["client"],status.battleTag["isOnline"])
-							
 						else
 							temp[accountName] = nil
 						end
@@ -287,11 +284,9 @@ local function InitializeAdvancedInterfaceFriendsStatus()
 		end
 	end
 	local function UnregisterEvent()
-		-- f:UnregisterEvent("BN_TOON_NAME_UPDATED")
 		f:UnregisterEvent("BN_FRIEND_INFO_CHANGED")
 	end
 	local function RegisterEvent()
-		-- f:RegisterEvent("BN_TOON_NAME_UPDATED")
 		f:RegisterEvent("BN_FRIEND_INFO_CHANGED")
 		f:RegisterEvent("BN_FRIEND_ACCOUNT_ONLINE")
 		f:SetScript("OnEvent", Messenger)
