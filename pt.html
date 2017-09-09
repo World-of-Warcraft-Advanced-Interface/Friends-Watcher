@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Friends Watcher · Extension for World of Warcraft</title>
+		<meta name="description" content="Simple open source addon will let you to select witch friends you want to track and it will always show current friend's factions in Friends List window">
+		<!-- This simple page was made by Nikita S. Doroshenko, design of this page is takeing from official World of Warcraft website -->
+		<!-- With ♥ to
+		.////////////... ..////....////. .///////////  ////////////. ../.    ./////////..   .////.....    
+		 ../////////////.  .///.   .//.  .////..   ./. ///....////.  ////.    ..//../////.  .//////////.  
+		  ./////.  .////.  .///.   .//.   ./..     ./. //.   .///.. ./////   ..///. ..////. .///////////. 
+		  ./////.  .////.  .////.  .//.   ./.    .///..//   .///.. .//////.  /////.   .///. .////////////.
+		  ./////.  .////.  .///.   .//.   ./.    //// ...  .////. .////////. .////.   .///. .///.  ./////.
+		  ./////..////.    ////.   .//.        ..///.      .///.  .////////.  ////.   ////. .///.    .///.
+		  .//////////.     .///.   .//.       .////.      .////. .////./////. ////.  .//..  .///.     ////
+		  .////////////    .///.   .//.      ./////       .////. .///. ..///. .///////..    .///.     ////
+		  ./////../////.   .////.  .//.     ..///..      .///// .////    ////. /////////.   .////    .///.
+		  ./////.  .////   .////.  .//      /////        /////. .///.    .///. .///../////  .////.  .////.
+		  ./////   .////   .////.  .//.   .////..       .////.  .///.    .///. .///  .////.  ////.  .///. 
+		  ./////   ./////  .////.  .//.   .////        ./////   ///////...///. .///  .////.  .///.  .///  
+		  .////.   ./////  /////.  .//    ////.      . ./////   ////..///////. .///.  /////. .///.  .//.  
+		  .////.   .///// ./////.  .//.  .///.     .//. ////. ./////.  ..////. .///.  .////.  .//.  .///  
+		  .////.    ////. ./////.  .//.  ..//   ..///.  .///..///....   .////. .///.   ////.  .//.  ////  
+		  .////.   .////. ..////   .//    //..../////.  ./// ... ....  ./////. .///.   .////. .//. .///.  
+		  .////.   .////.  ////.  .////...///////////.  .//  ...////. ./////. .////.   .////. .//..////.  
+		  .////.  .////.  .////. ........    .. ....   .//...////////  .////  /////.   /////.  //./////.  
+		  .////...////.   .////...........////.////.. .//////////////   .//.  ..////  ./////. .////////   
+		  //////////..    ./////////////////////////. .......  ......   .//      ./.  ...///  .///////.   
+		..////./...     .///..                ../////.                    /.       ..     ... ........    
+		
+		                        E   N   T   E   R   T   A   I   N   M   E   N   T                         
+		-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<header>
+			<h1>
+				Friends Watcher
+				<small>
+					Extension for World of Warcraft
+					<span> de Nikita S. Doroshenko</span>
+				</small>
+			</h1>
+			<ul>
+				<li>
+					<a href="de.html">Deutsch</a>
+				</li>
+				<li>
+					<a href="index.html" id="index">English</a>
+				</li>
+				<li>
+					<a href="es.html">Español</a>
+				</li>
+				<li>
+					<a href="fr.html">Français</a>
+				</li>
+				<li>
+					<a href="it.html">Italiano</a>
+				</li>
+				<li>
+					<a href="pt.html" class="active">Português</a>
+				</li>
+				<li>
+					<a href="ru.html">Русский</a>
+				</li>
+			</ul>
+		</header>
+		<main>
+			<article>
+				<figure id="figure">
+					<img id="source" src="assets/frame/base.jpg" alt="Friends Frame">
+					<img id="local" src="assets/frame/locale/en.png" alt="Frame locale">
+				</figure>
+				<h2>Acompanhe as atividades de seus amigos</h2>
+				<p>Você tem amigos para BattleTag'u? Talvez eles joguem pela Horda e pela Aliança. E talvez - mesmo em mundos diferentes ... E enquanto eles têm o mesmo nome de personagens. E como você rastreia onde seu amigo entrou no mundo do jogo e qual tipo de raça ele está jogando?</p>
+				<p>Esta extensão de fonte aberta simples permite selecionar amigos específicos cujo status você gostaria de rastrear. Além disso, ele acrescenta à janela "Lista de amigos" informações sobre as frações de todos os seus amigos. Depois de escolher quais amigos você deseja seguir, cada vez que você inserir ou mudar o personagem, você verá qual servidor seu amigo está jogando, bem como seu nome e facção.</p>
+				<p class="message"><img src="assets/icons/status.png" alt="Status Icon"> [Chuck Norris] (<span><img src="assets/icons/client.png" alt="Client Icon">Ubermegakiller</span>-Stormrage) foi convocado para o mundo do jogo para a Aliança.</p>
+				<p>Esta extensão está disponível no <a href="https://mods.curse.com/addons/wow/advanced-friends-interface" class="external" target="_blank">curse.com</a>, ou você pode baixá-lo diretamente das fontes e instalá-lo manualmente, colocando o diretório baixado no diretório raiz do seu jogo, no diretório Interface / AddOns.</p>
+				<a class="button special" href="https://github.com/World-of-Warcraft-Advanced-Interface/Friends-Watcher/archive/master.zip">BAIXAR</a><a class="button external" href="https://github.com/World-of-Warcraft-Advanced-Interface/Friends-Watcher/blob/master/Arranger_AdvancedFriendsUI/Arranger_AdvancedFriendsUI.lua" target="_blank">CÓDIGO FONTE</a>
+			</article>
+		</main>
+		<footer>
+			<p>CÓDIGO FONTE LIVRE E ABERTO (<abbr title="The MIT License is a permissive free software license originating at the Massachusetts Institute of Technology">MIT</abbr>)<br>TODAS AS MARCAS REGISTRADAS AQUI MENCIONADAS SÃO PROPRIEDADE DE SEUS RESPECTIVOS RESPECTIVOS PROPRIETÁRIOS</p>
+			<aside>
+				<p>Projeto <a href="#">Nikita S. Doroshenko</a></p>
+			</aside>
+		</footer>
+		<script>
+			WebFontConfig={google:{families:["Ubuntu:500,700:cyrillic","Open Sans:400:cyrillic"]}},function(e){var n=e.createElement("script"),s=e.scripts[0];n.src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js",n.async=!0,s.parentNode.insertBefore(n,s)}(document),window.onscroll=function(){var e=document.getElementById("figure");"slide"!=e.className&&(e.className+="slide")};
+			!function(e,t,a,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=t.createElement(a),s=t.getElementsByTagName(a)[0],o.async=1,o.src="https://www.google-analytics.com/analytics.js",s.parentNode.insertBefore(o,s)}(window,document,"script",0,"ga"),ga("create","UA-106164014-1","auto"),ga("send","pageview");
+		</script>
+	</body>
+</html>
