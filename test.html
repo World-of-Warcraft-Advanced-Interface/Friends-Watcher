@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Личный кабинет</title>
+		<meta name="description" content="Панель управления приложением">
+		<!-- Автор: Никита С. Дорошенко // nikita@s.doroshenko.im -->
+		<!-- Прошу вас, пожалуйста, не выкладывать данный код в паблик -->
+		<!-- Сверстал по принцыпу Mobile-first, креативно, по фану :) под хром, без использования классов, и айди, это совсем не просто так как сложно не превратить CSS в кашу и использовать валидный HTML, и конечно такой метод не подходит для серьёзных проектов, надеюсь вы оцените, ктобы этот код не смотрел. SVG подгружаются только через CSS, что создало также сложности с контролем цветов вектора, и что в некоторых случаях не пригодно для больших проектов. Использованы величины rem и em для лучшей адаптивности и контроля масштаба. Так как проект и без того маленький, решил SASS не задействовать. Версталось в SublimeText c Emmet. Исходник .sketch кинул в Figma и уже от туда смотрел-верстал. Большого внимания на вёрстку пиксель в пиксель не обращал, так как задачи такой не стояло, и хотелось сделать работу адаптивной, а прислан был только один вид, если необходимо, достаточно поменять некоторые величины и посидеть больше времени в Figmа/Sketch/AdobeXD. Шрифт подгружаю асинхронно через WebFontConfig. Dropdown для меню решил сделать без JavaScript, просто с CSS. Некоторые иконки в макете были из разных сетов и с разной стилистикой, так как небыло чёткого указания по требованиям я привёл их к одному стилю, но я специально сохранил копии других иконок по макету чтобы можно было их быстро заменить при необходимости. Приятного просмотра, и хорошего дня :) -->
+		<!-- С ♥ для
+		                     ...............      ...............                       
+		...............    ...................   ..................    .......      ....
+		...............   .....................   ..................   .........   .....
+		...............  .........      ........    .        ........  ..........  .....
+		    .........    .......         .........            ........ .................
+		  .........     ........          ........             ....... .................
+		 .........       .......         .........             ....... ...... ..........
+		...............  ..........   ..........              .......  ......   ........
+		...............   .....................   ...................  ......    .......
+		...............    ...................   ...................   ......      .....
+		                   .................     .................                      
+		                  ..............          ..............                        
+		                 ........                   ..........                          
+		                 .......                      ......                            
+		                   ....                         ...                             
+
+		                           Z   O   O   N   .   R   U                            
+		-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="test.css">
+	</head>
+	<body>
+		<header>
+			<ul>
+				<li>
+					<a>
+						<span>Отзывов</span>
+						<span>165</span>
+					</a>
+				</li>
+				<li>
+					<a>
+						<span>Неотвеченный вызов</span>
+						<span>21</span>
+					</a>
+				</li>
+				<li>
+					<a>
+						<span>Обновлений</span>
+						<span>50</span>
+					</a>
+				</li>
+				<li>
+					<a>
+						<span>Средний рейтинг</span>
+						<span>4,5</span>
+					</a>
+				</li>
+			</ul>
+		</header>
+		<main>
+			<article>
+				<section>
+					<header>
+						<p>
+							<span>Google</span>
+							<br>
+							<span>Все 30 заведений настроены</span>
+						</p>
+					</header>
+					<ul>
+						<li data-type=syncronized data-value=true>Синхронизированно</li>
+						<li>Инфа</li>
+						<li>Прайс</li>
+						<li>Фото</li>
+						<li>Акции</li>
+					</ul>
+					<aside>
+						<a>Настройка</a>
+					</aside>
+					<footer>
+						<p>
+							<span data-type=rating data-value=true>4.5 из 5</span>
+							<span data-type=information>198 отзывов, 15 неотвеченных</span>
+						</p> 
+						<aside data-type=update-available>2 Обновления</aside>
+					</footer>
+				</section>
+
+				<section>
+					<header>
+						<p>
+							<span>Flado</span>
+							<br>
+							<span>30 заведений</span>
+							<span>4 настроено</span>
+							<span>20 в поиске</span>
+						</p>
+					</header>
+					<ul>
+						<li data-type=syncronized data-value=false>Создаём 3 страницы</li>
+						<li>Инфа</li>
+						<li>Прайс</li>
+						<li>Фото</li>
+						<li>Акции</li>
+					</ul>
+					<aside>
+						<a>Настройка</a>
+					</aside>
+					<footer>
+						<p>
+							<span data-type=rating data-value=false>Портал без рейтинга</span>
+						</p> 
+						<aside data-type=action-required>Требует действий</aside>
+					</footer>
+				</section>
+
+				<section  data-type=blocked>
+					<header>
+						<p>
+							<span>2Gis</span>
+						</p>
+					</header>
+					<ul>
+						<li data-type=syncronized data-value=false>Создаём 2 страницы</li>
+					</ul>
+					<aside>
+						<a>Настройка</a>
+					</aside>
+					<footer>
+						<p>
+							<span data-type=loading>Поиск заведений: 15 из 78</span>
+						</p> 
+						<aside data-type=action-required>Требует действий</aside>
+					</footer>
+				</section>
+
+				<section data-type=disabled>
+					<header>
+						<p>
+							<span>Yell</span>
+						</p>
+					</header>
+					<aside>
+						<a>Настройка</a>
+						<ul>
+							<li><a>Включить</a></li>
+						</ul>
+					</aside>
+					<footer>
+						<p>
+							<span>Площадка отключена</span>
+						</p>
+					</footer>
+				</section>
+			</article>
+		</main>
+		<script>
+			WebFontConfig = {
+				google: {
+					families: ['Roboto:400,700:cyrillic']
+				}
+			};
+			(function(d) {
+				var wf = d.createElement('script'),
+					s = d.scripts[0];
+				wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+				wf.async = true;
+				s.parentNode.insertBefore(wf, s);
+			})(document);
+		</script>
+	</body>
+	<!-- FAVICONS & MANIFEST -->
+	<!-- https://stackoverflow.com/questions/48956465/favicon-standard-2019-svg-ico-png-and-dimensions -->
+	<!-- https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
+
+</html>
